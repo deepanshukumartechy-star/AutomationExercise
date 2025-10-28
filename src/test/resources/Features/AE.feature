@@ -21,7 +21,7 @@ Feature: Automation Exercise Website Testing
     Then click on continue shopping button
 
 
-    @SmokeTestt
+    @SmokeTest
     Scenario: Verify Functionality of Signup Login Page
     Given navigate to "https://automationexercise.com/"
     When I click on Signup Login button
@@ -36,6 +36,6 @@ Feature: Automation Exercise Website Testing
       Then I click on create account button
     Then I should see a message 'ACCOUNT CREATED!'
 
-@smokeTest
+
 
 

@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
         glue = {"stepDefinition"},
         plugin = {"com.aventstack.chaintest.plugins.ChainTestCucumberListener:"},
         monochrome = true,
-        tags = "@SmokeTestt"
+        tags = "@SmokeTest"
 )
 
 public class TestSuiteRunner  extends AbstractTestNGCucumberTests {
