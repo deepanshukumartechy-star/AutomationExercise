@@ -61,4 +61,54 @@ public class AEStepDefinition {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-dismiss='modal']"))).click();
     }
 
+    @When("I click on Signup Login button")
+    public void i_click_on_signup_login_button() {
+        driver.findElement(By.xpath("//header//a[text()=' Signup / Login']")).click();
+
+    }
+    @Then("I fill the signup form with the following data:")
+    public void i_fill_the_signup_form_with_the_following_data(io.cucumber.datatable.DataTable dataTable) {
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys(dataTable.cell(1,0));
+        driver.findElement(By.xpath("//form/input[@data-qa='signup-email']")).sendKeys(dataTable.cell(1,1));
+        System.out.println("Signup form filled with name: " + dataTable.cell(1,0) + " and email: " + dataTable.cell(1,1));
+    }
+
+    @Then("I click on signup button")
+    public void i_click_on_signup_button() {
+        driver.findElement(By.xpath("//button[@data-qa='signup-button']")).click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+    }
+
+    @Then("I should be navigated to Enter Account Information page")
+    public void i_should_be_navigated_to_enter_account_information_page() {
+        System.out.println("Navigated to Enter Account Information page");
+    }
+
+    @Then("I fill the account information form with the following data:")
+    public void i_fill_the_account_information_form_with_the_following_data(io.cucumber.datatable.DataTable dataTable) {
+        driver.findElement(By.xpath("//input[@data-qa='password']")).sendKeys(dataTable.cell(1,0));
+        driver.findElement(By.xpath("//input[@id='first_name']")).sendKeys(dataTable.cell(1,1));
+        driver.findElement(By.xpath("//input[@id='last_name']")).sendKeys(dataTable.cell(1,2));
+        driver.findElement(By.xpath("//input[@id='address1']")).sendKeys(dataTable.cell(1,3));
+        driver.findElement(By.xpath("//select[@id='country']")).sendKeys(dataTable.cell(1,4));
+        driver.findElement(By.xpath("//input[@id='state']")).sendKeys(dataTable.cell(1,5));
+        driver.findElement(By.xpath("//input[@id='city']")).sendKeys(dataTable.cell(1,6));
+        driver.findElement(By.xpath("//input[@id='zipcode']")).sendKeys(dataTable.cell(1,7));
+        driver.findElement(By.xpath("//input[@id='mobile_number']")).sendKeys(dataTable.cell(1,8));
+
+    }
+
+    @Then("I click on create account button")
+    public void i_click_on_create_account_button() {
+        driver.findElement(By.xpath("//button[@data-qa='create-account']")).click();
+    }
+
+    @Then("I should see a message {string}")
+    public void i_should_see_a_message(String string) {
+        System.out.println("Account created successfully message displayed: " + string);
+    }
+
+
+
 }

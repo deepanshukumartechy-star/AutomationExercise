@@ -19,9 +19,9 @@
         <span class="ms-3 fs-6">QA Test Project</span>
       </div>
       <div>
-        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 26s</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1 text-success"></i> 2025-10-24 10:53:44 am</span>
-        <span class="badge badge-outline text-lg me-3"><i class="bi bi-clock me-1 text-danger"></i> 2025-10-24 10:54:11 am</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 14s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1 text-success"></i> 2025-10-27 01:44:11 pm</span>
+        <span class="badge badge-outline text-lg me-3"><i class="bi bi-clock me-1 text-danger"></i> 2025-10-27 01:44:26 pm</span>
           <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
             <i class="bi bi-pc-display-horizontal"></i></button>
         <button role="button" id="shortcuts" class="btn btn-outline-primary smaller" title="Shortcuts">
@@ -63,7 +63,7 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp2">3</span> Passed,
+                <span id="sp2">1</span> Passed,
                 <span id="sf2">0</span> Failed,
                 <span id="ss2">0</span> Skipped
               </div>
@@ -80,7 +80,7 @@
                   </div>
                 </div>
                 <div class="card-footer small">
-                  <span id="sp3">10</span> Passed,
+                  <span id="sp3">8</span> Passed,
                   <span id="sf3">0</span> Failed,
                   <span id="ss3">0</span> Skipped
                 </div>
@@ -110,11 +110,11 @@
               </thead>
               <tbody>
                   <tr>
-                    <td><a href="#" class="secondary tag">@SmokeTest</a></td>
-                    <td>3</td>
-                    <td>3</td>
+                    <td><a href="#" class="secondary tag">@SmokeTestt</a></td>
+                    <td>1</td>
+                    <td>1</td>
                     <td>0</td>
-                    <td>1ms</td>
+                    <td>3ms</td>
                   </tr>
               </tbody>
             </table>
@@ -146,12 +146,12 @@
               <div class="small">
                 <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 3ms</span>
                 <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
-                  2025-10-24 10:54:11 am</span>
+                  2025-10-27 01:44:26 pm</span>
                 <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
-                  2025-10-24 10:54:11 am</span>
+                  2025-10-27 01:44:26 pm</span>
               </div>
                 <div class="my-2">
-                    <span class="badge rounded-pill text-bg-secondary">@SmokeTest</span>
+                    <span class="badge rounded-pill text-bg-secondary">@SmokeTestt</span>
                 </div>
               
             </div>
@@ -161,14 +161,14 @@
                     <div class="d-flex justify-content-between">
                       <div>
                           <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="fs-6 ms-2">Scenario: Home Page Verification</span>
+                        <span class="fs-6 ms-2">Scenario: Verify Functionality of Signup Login Page</span>
                       </div>
                       <div>
                           <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">@SmokeTest</span>
+                              <span class="badge rounded-pill text-bg-secondary">@SmokeTestt</span>
                           </span>
                           <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">1ms</span>
+                        <span class="badge text-dark bg-light">3ms</span>
                       </div>
                     </div>
                     
@@ -179,79 +179,31 @@
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then verify that home page is visible successfully</span>
-        </div>
-  </div>
-                  </div>
-                </div>
-                <div class="card mb-3 result passed">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="fs-6 ms-2">Scenario: Product Page Navigation</span>
-                      </div>
-                      <div>
-                          <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">@SmokeTest</span>
-                          </span>
-                          <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">0ms</span>
-                      </div>
-                    </div>
-                    
-  <div class="mt-2">
-        <div class="mt-1 pb-1">
-            <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given navigate to "https://automationexercise.com/"</span>
+          <span class="ms-2">When I click on Signup Login button</span>
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">When I click on Products button</span>
+          <span class="ms-2">Then I fill the signup form with the following data:</span>
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then I should be navigated to products page successfully</span>
-        </div>
-  </div>
-                  </div>
-                </div>
-                <div class="card mb-3 result passed">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                          <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="fs-6 ms-2">Scenario: Add Product to Cart</span>
-                      </div>
-                      <div>
-                          <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">@SmokeTest</span>
-                          </span>
-                          <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">0ms</span>
-                      </div>
-                    </div>
-                    
-  <div class="mt-2">
-        <div class="mt-1 pb-1">
-            <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Given navigate to "https://automationexercise.com/"</span>
+          <span class="ms-2">Then I click on signup button</span>
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">When I click on Products button</span>
+          <span class="ms-2">Then I should be navigated to Enter Account Information page</span>
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">And I click on view product</span>
+          <span class="ms-2">Then I fill the account information form with the following data:</span>
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then I click on add to cart button</span>
+          <span class="ms-2">Then I click on create account button</span>
         </div>
         <div class="mt-1 pb-1">
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="ms-2">Then click on continue shopping button</span>
+          <span class="ms-2">Then I should see a message 'ACCOUNT CREATED!'</span>
         </div>
   </div>
                   </div>
@@ -270,15 +222,15 @@
       { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
       { result: 'Skipped', count: 0, bg: 'rgb(13, 202, 240)' }
     ];
-      const stats2Annotation = {'total': 3, 'passed': 3};
+      const stats2Annotation = {'total': 1, 'passed': 1};
       const stats2 = [
-        { result: 'Passed', count: 3, bg: 'rgb(140, 197, 83)' },
+        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
         { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(13, 202, 240)' }
       ];
-      const stats3Annotation = {'total': 10, 'passed': 10};
+      const stats3Annotation = {'total': 8, 'passed': 8};
       const stats3 = [
-        { result: 'Passed', count: 10, bg: 'rgb(140, 197, 83)' },
+        { result: 'Passed', count: 8, bg: 'rgb(140, 197, 83)' },
         { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(13, 202, 240)' }
       ];
