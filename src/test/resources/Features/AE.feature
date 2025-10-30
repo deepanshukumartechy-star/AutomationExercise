@@ -1,6 +1,6 @@
 Feature: Automation Exercise Website Testing
 
-  @SmokeTest
+  @SmokeTestt
   Scenario: Home Page Verification
     Given navigate to "https://automationexercise.com/"
     Then verify that home page is visible successfully

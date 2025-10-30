@@ -10,7 +10,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.Duration;
+import java.util.Properties;
 
 import static rst.pdfbox.layout.text.annotations.Annotations.HyperlinkAnnotation.LinkStyle.ul;
 import static stepDefinition.Hooks.driver;
@@ -23,15 +27,32 @@ public class AEStepDefinition {
         driver.get(url);
     }
 
+    // java
     @Then("verify that home page is visible successfully")
     public void verify_that_home_page_is_visible_successfully() {
         String actualResult = driver.findElement(By.xpath("//*[@id='slider-carousel']/div/div[1]/div[1]/h2")).getText();
-        String expectedResult = "Full-Fledged practice website for Automation Engineers";
-        if (actualResult.equals(expectedResult)) {
-            System.out.println("Home page is visible successfully. Test Passed");
 
+        try (InputStream is = AEStepDefinition.class.getClassLoader().getResourceAsStream("testdata.properties")) {
+            if (is == null) {
+                throw new RuntimeException("Resource not found: `testdata.properties`. Put the file in `src/test/resources`.");
+            }
+            Properties prop = new Properties();
+            prop.load(is);
+            String expectedResult = prop.getProperty("expectedResult");
+            if (expectedResult == null) {
+                throw new RuntimeException("Property `expectedResult` not found in testdata.properties");
+            }
+            if (actualResult.equals(expectedResult)) {
+                System.out.println("Home page is visible successfully. Test Passed");
+            } else {
+                System.out.println("Home page text mismatch. Actual: " + actualResult + " Expected: " + expectedResult);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to load testdata.properties", e);
         }
     }
+
 
     @When("I click on Products button")
     public void i_click_on_button() {
